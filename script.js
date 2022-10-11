@@ -1,11 +1,14 @@
-document.addEventListener("keyup", listener, e=>{
-    if (e.target.matches("#buscador")){
+document.addEventListener("keyup", e=>{
 
-        document.querySelectorAll( selectors, ".articulo").forEach (callbackfn, comida => {
+   if (e.target.matches("#buscador")){
+if (e.key==="Escape")e.target.value = " "
 
-            comida.textContent.tolowerCase().include(e.target.value.tolowerCase())
-            ?comida.classlist.remove ( token, "filtro")
-            :comida.classlist.add("filtro")
-        })
-    }
-})
+    document.querySelectorAll(".articulo").forEach(comida =>{
+
+        comida.textContent.toLowerCase() .includes(e.target.value.toLowerCase())
+         ?comida.classList.remove("filtro")
+         :comida.classList.add( "filtro")
+    })
+   }
+}  
+)
